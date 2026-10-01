@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Gift For You ❤️</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="container text-center">
+
+        <h1>🎀 A Little Gift For You ♡</h1>
+
+        <p>
+            I couldn't decide what to give you...
+        </p>
+
+        <p>
+            So you get to choose. 🥺💕
+        </p>
+
+        <div class="row justify-content-center g-4 mt-4">
+
+            <div class="col-10 col-md-3">
+                <button class="gift letter-gift" onclick="openGift(1)">
+                    💌
+                </button>
+                <h5>Something to read</h5>
+                <small>Maybe it's for you ♡</small>
+            </div>
+
+            <div class="col-10 col-md-3">
+                <button class="gift memory-gift" onclick="openGift(2)">
+                    📸
+                </button>
+                <h5>Something to remember</h5>
+                <small>A little memory ♡</small>
+            </div>
+
+            <div class="col-10 col-md-3">
+                <button class="gift surprise-gift" onclick="openGift(3)">
+                    🎟️
+                </button>
+                <h5>Something special</h5>
+                <small>What's inside? 👀</small>
+            </div>
+
+        </div>
+        <div id="result" class="result"></div>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
